@@ -34,17 +34,22 @@ export const postLearner = async (req, res) => {
   } = req.body;
 
   if (
-        
+    !nom &&
     nom.trim() === "" &&
+    !postnom &&
     postnom.trim() === "" &&
+    !prenom &&
     prenom.trim() === "" &&
+    !sexe &&
     sexe.trim() === "" &&
+    !image &&
     image.trim() === "" &&
+    !email &&
     email.trim() === "" &&
+    !password &&
     password.trim() === "" &&
-    contact.trim() === "" &&
+    !filiere &&
     filiere.trim() === ""
-
   ) {
     res
       .status(500)
@@ -57,6 +62,21 @@ export const postLearner = async (req, res) => {
       res.status(400).json({ message: "Interval server Error" });
     } else {
       res.status(201).json({ learner, message: "Learner Added" });
+    }
+  } catch (err) {
+    return new Error(err);
+  }
+};
+
+export const getOnLearner = async (req, res) => {
+  const id = req.query.id;
+
+  try {
+    const learner = await learnerModel.findById(id);
+    if (!learner) {
+      res.status(500).json({ message: "No Learner Find" });
+    } else {
+      res.status(200).json({ learner, message: "Successfull" });
     }
   } catch (err) {
     return new Error(err);
