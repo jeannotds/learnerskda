@@ -33,23 +33,23 @@ export const postLearner = async (req, res) => {
     entreprise,
   } = req.body;
 
-//   if (
+  if (
         
-//     nom.trim() === "" &&
-//     postnom.trim() === "" &&
-//     prenom.trim() === "" &&
-//     sexe.trim() === "" &&
-//     email.trim() === "" &&
-//     password.trim() === "" &&
-//     contact.trim() === "" &&
-//     filiere.trim() === "" &&
-//     description.trim() === "" &&
-//     entreprise.trim() === ""
-//   ) {
-//     res
-//       .status(500)
-//       .json({ message: "Nom, Prenom, Prenom et Sexe are required input" });
-//   }
+    nom.trim() === "" &&
+    postnom.trim() === "" &&
+    prenom.trim() === "" &&
+    sexe.trim() === "" &&
+    image.trim() === "" &&
+    email.trim() === "" &&
+    password.trim() === "" &&
+    contact.trim() === "" &&
+    filiere.trim() === ""
+
+  ) {
+    res
+      .status(500)
+      .json({ message: "Nom, Prenom, Prenom et Sexe are required input" });
+  }
 
   try {
     const learner = await learnerModel.create(req.body);

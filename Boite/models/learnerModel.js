@@ -31,7 +31,6 @@ const learnerSchema = new mongoose.Schema({
   },
   contact: {
     type: Number,
-    required: true,
   },
   filiere: {
     type: String,
@@ -39,11 +38,9 @@ const learnerSchema = new mongoose.Schema({
   },
   description: {
     type: String,
-    required: true,
   },
   entreprise: {
     type: String,
-    required: true,
   },
 });
 
