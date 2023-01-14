@@ -5,9 +5,9 @@ const connectMongoDB = async () => {
   }
   await mongoose
     .connect(
-      "mongodb+srv://jeannotds:jeannot1997@cluster0.f0osgcn.mongodb.net/learnerkda?retryWrites=true&w=majority"
+      "mongodb+srv://jeannotds:jeannot1997@cluster0.f0osgcn.mongodb.net/bookstore?retryWrites=true&w=majority"
     )
-    .then((res) => console.log("Connected To MongoDB"))
+    .then(() => console.log("Connected To MongoDB"))
     .catch((error) => console.log(error));
 };
 
