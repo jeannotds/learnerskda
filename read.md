@@ -10,4 +10,4 @@ Message de commit
 -fixes cart issue when a user tries add some product : corrige un problème de panier lorsqu'un utilisateur essaie d'ajouter un produit
 -corrige le problème du panier
 -improve user screen : améliorer l'écran de l'utilisateur
--update cart to improve purchase process : mettre à jour le panier pour améliorer le processus d'achat
+-update cart to improve purchase process : mettre à jour le panier pour améliorer le processus d'achat fff
