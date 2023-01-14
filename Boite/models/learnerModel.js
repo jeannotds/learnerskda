@@ -1,10 +1,6 @@
 import mongoose from "mongoose";
 
 const learnerSchema = new mongoose.Schema({
-  title: {
-    type: String,
-    required: true,
-  },
   nom: {
     type: String,
     required: true,
@@ -13,9 +9,17 @@ const learnerSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  prenom: {
+    type: String,
+    required: true,
+  },
   sexe: {
     type: String,
     required: true,
+  },
+  image: {
+    type: String,
+    required: true
   },
   email: {
     type: String,
@@ -29,7 +33,7 @@ const learnerSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  profession: {
+  filiere: {
     type: String,
     required: true,
   },
@@ -38,7 +42,7 @@ const learnerSchema = new mongoose.Schema({
     required: true,
   },
   entreprise: {
-    type: Number,
+    type: String,
     required: true,
   },
 });
