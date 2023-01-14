@@ -29,6 +29,7 @@ export const postLearner = async (req, res) => {
     password,
     contact,
     filiere,
+    cohorte,
     description,
     entreprise,
   } = req.body;
@@ -49,11 +50,16 @@ export const postLearner = async (req, res) => {
     !password &&
     password.trim() === "" &&
     !filiere &&
-    filiere.trim() === ""
+    filiere.trim() === "" &&
+    !cohorte &&
+    cohorte.trim() === ""
   ) {
     res
       .status(500)
-      .json({ message: "Nom, Prenom, Prenom et Sexe are required input" });
+      .json({
+        message:
+          "Nom, Prenom, Prenom, Sexe, image, email, password, filiere and cohorte are required input",
+      });
   }
 
   try {
@@ -110,6 +116,7 @@ export const putLearner = async (req, res) => {
     password,
     contact,
     filiere,
+    cohorte,
     description,
     entreprise,
   } = req.body;
@@ -130,9 +137,14 @@ export const putLearner = async (req, res) => {
     !password &&
     password.trim() === "" &&
     !filiere &&
-    filiere.trim() === ""
+    filiere.trim() === "" &&
+    !cohorte &&
+    cohorte.trim() === ""
   ) {
-    res.status(422).json({ message: "Invalid Input" });
+    res.status(422).json({
+      message:
+        "Nom, Prenom, Prenom, Sexe, image, email, password, filiere and cohorte are required input",
+    });
   }
 
   try {
@@ -146,6 +158,7 @@ export const putLearner = async (req, res) => {
       password,
       contact,
       filiere,
+      cohorte,
       description,
       entreprise,
     });

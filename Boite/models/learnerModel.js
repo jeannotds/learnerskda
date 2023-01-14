@@ -37,6 +37,10 @@ const learnerSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  cohorte: {
+    type: Number,
+    required: true,
+  },
   description: {
     type: String,
     required: false,
