@@ -172,30 +172,32 @@ export const putLearner = async (req, res) => {
     });
   }
 
-  try {
-    const learner = await learnerModel.findByIdAndUpdate(id, {
-      nom,
-      postnom,
-      prenom,
-      sexe,
-      image,
-      email,
-      password,
-      contact,
-      filiere,
-      cohorte,
-      description,
-      entreprise,
-    });
+  bcrypt.hash(req.body.password, 10, async function (err, hash) {
+    try {
+      const learner = await learnerModel.findByIdAndUpdate(id, {
+        nom: req.body.nom,
+        postnom: req.body.postnom,
+        prenom: req.body.prenom,
+        sexe: req.body.sexe,
+        image: req.body.image,
+        email: req.body.email,
+        password: hash,
+        contact: req.body.contact,
+        filiere: req.body.filiere,
+        cohorte: req.body.cohorte,
+        description: req.body.description,
+        entreprise: req.body.entreprise,
+      });
 
-    if (!learner) {
-      res.status(500).json({ message: "Interval Server Error" });
-    } else {
-      res.status(200).json({ learner, message: "Successfull" });
+      if (!learner) {
+        res.status(500).json({ message: "Interval Server Error" });
+      } else {
+        res.status(200).json({ learner, message: "Successfull" });
+      }
+    } catch (err) {
+      return new Error(err);
     }
-  } catch (err) {
-    return new Error(err);
-  }
+  });
 };
 
 export const login = async (req, res) => {
