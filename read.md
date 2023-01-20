@@ -15,4 +15,7 @@ Message de commit
 
 generateur mot de passe
 npm install generate-password --save
---------------------------------------
+--------------------------------------  
+
+crypté mot de passe
+npm install --save bcrypt

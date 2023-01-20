@@ -182,3 +182,18 @@ export const putLearner = async (req, res) => {
     return new Error(err);
   }
 };
+
+export const login = async (req, res) => {
+  const { email, password } = req.body;
+
+  const user = await learnerModel.findOne({ email, password });
+  try {
+    if (!user) {
+      res.status(500).json({ message: "User not find" });
+    } else {
+      res.status(200).json({ message: "User find" });
+    }
+  } catch (err) {
+    return new Error(err);
+  }
+};
