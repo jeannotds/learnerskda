@@ -206,9 +206,18 @@ export const login = async (req, res) => {
   const user = await learnerModel.findOne({ email, password });
   try {
     if (!user) {
-      res.status(500).json({ message: "User not find" });
+      res.status(401).json({ message: "Identify or password incorrect" });
     } else {
-      res.status(200).json({ message: "User find" });
+      const valid = bcrypt.compare(req.body.password, user.password);
+      try {
+        if (!valid) {
+          res.status(401).json({ message: "Identify or password incorrect" });
+        } else {
+          res.status(201).json({ user, message: "User Find" });
+        }
+      } catch (err) {
+        new Error(err);
+      }
     }
   } catch (err) {
     return new Error(err);
