@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import mongooseUniqueValidator from "mongoose-unique-validator";
+import bcrypt from "bcrypt";
 
 const learnerSchema = new mongoose.Schema({
   nom: {
@@ -20,12 +21,12 @@ const learnerSchema = new mongoose.Schema({
   },
   image: {
     type: String,
-    required: true
+    required: true,
   },
   email: {
     type: String,
     required: true,
-    unique:true
+    unique: true,
   },
   password: {
     type: String || Number,
@@ -53,7 +54,7 @@ const learnerSchema = new mongoose.Schema({
   },
 });
 
-learnerSchema.plugin(mongooseUniqueValidator)
+learnerSchema.plugin(mongooseUniqueValidator);
 
-export default mongoose.models.Learner || mongoose.model("Learner", learnerSchema);
-
+export default mongoose.models.Learner ||
+  mongoose.model("Learner", learnerSchema);

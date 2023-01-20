@@ -1,4 +1,5 @@
 import learnerModel from "../models/learnerModel";
+import bcrypt from "bcrypt";
 
 export const getLearners = async (req, res) => {
   const learners = await learnerModel.find();
@@ -61,21 +62,35 @@ export const postLearner = async (req, res) => {
     entreprise.trim() === ""
   ) {
     res.status(500).json({
-      message:
-        "Nom, Prenom, Prenom, Sexe, image, email, password, filiere and cohorte are required input",
+      message: "You must geting word",
     });
   }
 
-  try {
-    const learner = await learnerModel.create(req.body);
-    if (!learner) {
-      res.status(400).json({ message: "Interval server Error" });
-    } else {
-      res.status(201).json({ learner, message: "Learner Added" });
+  bcrypt.hash(req.body.password, 10, async function (err, hash) {
+    try {
+      const learner = await learnerModel.create({
+        nom: req.body.nom,
+        postnom: req.body.postnom,
+        prenom: req.body.prenom,
+        sexe: req.body.sexe,
+        image: req.body.image,
+        email: req.body.email,
+        password: hash,
+        contact: req.body.contact,
+        filiere: req.body.filiere,
+        cohorte: req.body.cohorte,
+        description: req.body.description,
+        entreprise: req.body.entreprise,
+      });
+      if (!learner) {
+        res.status(400).json({ message: "Interval server Error" });
+      } else {
+        res.status(201).json({ learner, message: "Learner Added" });
+      }
+    } catch (err) {
+      return new Error(err);
     }
-  } catch (err) {
-    return new Error(err);
-  }
+  });
 };
 
 export const getOnLearner = async (req, res) => {
