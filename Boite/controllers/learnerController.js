@@ -1,5 +1,4 @@
 import learnerModel from "../models/learnerModel";
-import { password } from "../generatorPassword/generatorpassword";
 
 export const getLearners = async (req, res) => {
   const learners = await learnerModel.find();
@@ -27,7 +26,7 @@ export const postLearner = async (req, res) => {
     sexe,
     image,
     email,
-    password : password,
+    password,
     contact,
     filiere,
     cohorte,
@@ -50,10 +49,16 @@ export const postLearner = async (req, res) => {
     email.trim() === "" &&
     !password &&
     password.trim() === "" &&
+    !contact &&
+    contact.trim() === "" &&
     !filiere &&
     filiere.trim() === "" &&
     !cohorte &&
-    cohorte.trim() === ""
+    cohorte.trim() === "" &&
+    !description &&
+    description.trim() === "" &&
+    !entreprise &&
+    entreprise.trim() === ""
   ) {
     res.status(500).json({
       message:
@@ -135,10 +140,16 @@ export const putLearner = async (req, res) => {
     email.trim() === "" &&
     !password &&
     password.trim() === "" &&
+    !contact &&
+    contact.trim() === "" &&
     !filiere &&
     filiere.trim() === "" &&
     !cohorte &&
-    cohorte.trim() === ""
+    cohorte.trim() === "" &&
+    !description &&
+    description.trim() === "" &&
+    !entreprise &&
+    entreprise.trim() === ""
   ) {
     res.status(422).json({
       message:
