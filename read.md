@@ -18,8 +18,15 @@ npm install generate-password --save
 --------------------------------------  
 
 crypté mot de passe
-npm install --save bcrypt
+npm install --save bcrypt   
+
+-----------------------
+
+generer un token
+npm install jsonwebtoken
+--------------------------
+
 
 -------------------------------------
-create token
+
 npm install passport-jwt

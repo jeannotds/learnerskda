@@ -1,5 +1,6 @@
 import learnerModel from "../models/learnerModel";
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 
 export const getLearners = async (req, res) => {
   const learners = await learnerModel.find();
@@ -204,6 +205,7 @@ export const login = async (req, res) => {
   const { email, password } = req.body;
 
   const user = await learnerModel.findOne({ email, password });
+
   try {
     if (!user) {
       res.status(401).json({ message: "Identify or password incorrect" });
@@ -213,7 +215,15 @@ export const login = async (req, res) => {
         if (!valid) {
           res.status(401).json({ message: "Identify or password incorrect" });
         } else {
-          res.status(201).json({ user, message: "User Find" });
+          res.status(200).json({
+            user,
+            token: jwt.sign(
+              { userId: user._id }, 
+              "RANDOM_TOKEN_SECRET", 
+              { expiresIn: "24h", }
+            ),
+            message: "User Find",
+          });
         }
       } catch (err) {
         new Error(err);
