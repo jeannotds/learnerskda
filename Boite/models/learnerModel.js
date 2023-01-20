@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import mongooseUniqueValidator from "mongoose-unique-validator";
 
 const learnerSchema = new mongoose.Schema({
   nom: {
@@ -24,6 +25,7 @@ const learnerSchema = new mongoose.Schema({
   email: {
     type: String,
     required: true,
+    unique:true
   },
   password: {
     type: String || Number,
@@ -50,6 +52,8 @@ const learnerSchema = new mongoose.Schema({
     required: false,
   },
 });
+
+learnerSchema.plugin(mongooseUniqueValidator)
 
 export default mongoose.models.Learner || mongoose.model("Learner", learnerSchema);
 

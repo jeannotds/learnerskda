@@ -11,3 +11,8 @@ Message de commit
 -corrige le problème du panier
 -improve user screen : améliorer l'écran de l'utilisateur
 -update cart to improve purchase process : mettre à jour le panier pour améliorer le processus d'achat fff
+
+
+generateur mot de passe
+npm install generate-password --save
+--------------------------------------

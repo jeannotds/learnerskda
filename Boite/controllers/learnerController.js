@@ -1,4 +1,5 @@
 import learnerModel from "../models/learnerModel";
+import { password } from "../generatorPassword/generatorpassword";
 
 export const getLearners = async (req, res) => {
   const learners = await learnerModel.find();
@@ -26,7 +27,7 @@ export const postLearner = async (req, res) => {
     sexe,
     image,
     email,
-    password,
+    password : password,
     contact,
     filiere,
     cohorte,
@@ -54,12 +55,10 @@ export const postLearner = async (req, res) => {
     !cohorte &&
     cohorte.trim() === ""
   ) {
-    res
-      .status(500)
-      .json({
-        message:
-          "Nom, Prenom, Prenom, Sexe, image, email, password, filiere and cohorte are required input",
-      });
+    res.status(500).json({
+      message:
+        "Nom, Prenom, Prenom, Sexe, image, email, password, filiere and cohorte are required input",
+    });
   }
 
   try {
