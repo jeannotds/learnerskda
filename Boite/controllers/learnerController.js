@@ -217,11 +217,12 @@ export const login = async (req, res) => {
         } else {
           res.status(200).json({
             user,
-            token: jwt.sign(
+            token: "Bearer "+ jwt.sign(
               { userId: user._id }, 
               "RANDOM_TOKEN_SECRET", 
               { expiresIn: "24h", }
             ),
+            success: true,
             message: "User Find",
           });
         }
