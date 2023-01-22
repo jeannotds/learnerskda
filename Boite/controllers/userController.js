@@ -1,5 +1,6 @@
 import userModel from "../models/userModel";
 import bcrypt from "bcrypt";
+import jwt, { sign } from "jsonwebtoken";
 
 export const sigup = async (req, res) => {
   const { nom, email, password } = req.body;
@@ -52,7 +53,25 @@ export const loginuser = async (req, res) => {
     if (!user) {
       res.status(400).json({ message: "Identity Or Password Incorrect" });
     } else {
-      res.status(201).json({ user, message: "User Found" });
+      const valid = bcrypt.compare(req.body.password, user.password);
+      try {
+        if (!valid) {
+          res.status(500).json({ message: "Identify or password incorrect" });
+        } else {
+          res.status(201).json({
+            user,
+            token:
+              "Bearer " +
+              jwt.sign({ learnerId: user._id }, "RANDOM_TOKEN_SECRET", {
+                expiresIn: "24h",
+              }),
+            success: true,
+            message: "User Found",
+          });
+        }
+      } catch (err) {
+        return new Error(err);
+      }
     }
   } catch (err) {
     return new Error(err);

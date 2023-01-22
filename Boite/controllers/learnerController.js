@@ -218,7 +218,7 @@ export const login = async (req, res) => {
           res.status(200).json({
             user,
             token: "Bearer "+ jwt.sign(
-              { userId: user._id }, 
+              { learnerId: user._id }, 
               "RANDOM_TOKEN_SECRET", 
               { expiresIn: "24h", }
             ),
