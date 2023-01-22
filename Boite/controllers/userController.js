@@ -1,6 +1,6 @@
 import userModel from "../models/userModel";
 
-export const postUser = async (req, res) => {
+export const sigup = async (req, res) => {
   const { nom, email, password } = req.body;
 
   try {
