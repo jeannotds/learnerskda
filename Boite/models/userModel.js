@@ -1,9 +1,17 @@
 import mongoose from "mongoose";
-
-const userModel = new mongoose.Schema({
-  nom: { type: String, required: true },
-  gmail: { type: String, required: true },
-  password: { type: String, required: true, unique: true },
+import mongooseUniqueValidator from "mongoose-unique-validator";
+const userSchema = new mongoose.Schema({
+  nom: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+  },
 });
 
-export default mongoose.medels.User || mongoose.medel("User", userModel);
+userSchema.plugin(mongooseUniqueValidator);
+
+export default mongoose.models.User || mongoose.model("User", userSchema);
