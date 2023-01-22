@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
 import mongooseUniqueValidator from "mongoose-unique-validator";
-import bcrypt from "bcrypt";
 
 const learnerSchema = new mongoose.Schema({
   nom: {
