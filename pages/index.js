@@ -4,6 +4,7 @@ import Head from "next/head";
 import { Inter } from "@next/font/google";
 import Header from "../components/Header";
 import Mains from "../components/Main";
+import Learners from "../components/Learners";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function Home() {
       </Head>
       <Header />
       <Mains />
+      <Learners />
     </>
   );
 }
