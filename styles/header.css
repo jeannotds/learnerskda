@@ -1,21 +1,21 @@
-*{
-    font-family: 'Roboto', sans-serif;
-}
+
 
 a{
     text-decoration: none;
     color: #FFFFFF;
+    font-size: 15px;
 }
 
 .header{
     display: flex;
-    height: 58px;
+    height: 62px;
     background-color: #111727;
     color: #FFFFFF;
     align-items: center;
     justify-content: space-between;
     padding: 0 71px;
-    
+
+    /* box-shadow: 10px 5px 5px red; */
 }
 
 .logo{
@@ -24,7 +24,7 @@ a{
 }
 
 .nav-link a{
-    margin-left: 63px;
+    margin-left: 93px;
     font-weight: 400;
 }
 
