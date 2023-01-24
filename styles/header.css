@@ -1,5 +1,35 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
 .header{
-    height: 118px;
+    display: flex;
+    height: 58px;
     background-color: #111727;
     color: #FFFFFF;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 71px;
+    
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.nav-link a{
+    margin-left: 63px;
+    font-weight: 400;
+}
+
+.important{
+    border: 1px solid #FFF;
+    padding: 4px 10px;
+    border-radius: 7px;
 }
