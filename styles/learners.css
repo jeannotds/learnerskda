@@ -1,15 +1,32 @@
 .msg-alert{
     margin-top: 35px;
     margin-bottom: 35px;
-}
-.learners{
     padding: 0 71px;
-    margin: 20px 0;
+}
+
+
+.learners-pub{
+    display: flex;
+    padding: 0 71px;
+}
+
+.publicity{
+    width: 20%;
+}
+
+.learnerAleatoir{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    width: 80%;
 }
 
 .msg-alert{
     font-size: 15px;
     color: #111727;
+    width: 100%;
 }
 
 .msg-alert p{
@@ -41,7 +58,6 @@
 .blog-learner{
     width: 300px;
     height: 200px;
-    
 }
 
 .blog-learner:hover{
@@ -67,15 +83,10 @@
 .container-learner{
     display: flex;
     flex-wrap: wrap;
-    margin-right: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 5px 5px 5px 0;
 }
 
-.learnerAleatoir{
-    display: flex;
-    flex-wrap: wrap;
-}
+
 
 .learner-description{
     color: rgba(0, 0, 0, 0.5);
