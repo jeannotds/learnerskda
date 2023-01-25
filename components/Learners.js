@@ -1,6 +1,5 @@
 import React from "react";
-import Image from "next/image";
-import ImageMain from "../img/main.jpg";
+
 import ListLearners from "./ListLearners";
 
 function Learners({ data }) {

@@ -1,6 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Image from "next/image";
-import ImageMain from "../img/main.jpg";
 
 function ListLearners({
   id,
@@ -25,10 +25,11 @@ function ListLearners({
         data-aos-delay="50"
       >
         <div className="blog-learner">
-          <Image
-            src={ImageMain}
+          <img
+            src={image}
             alt="image of main page"
             className="leaner-img"
+            component="img"
           />
           <div className="title-learner">{filiere}</div>
           <div className="learner-description">{description}</div>
