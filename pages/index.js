@@ -25,6 +25,12 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Unbounded:wght@800&display=swap"
           rel="stylesheet"
         ></link>
+        <link
+          href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+          rel="stylesheet"
+        ></link>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>AOS.init();</script>
       </Head>
       <Header />
       <Mains />

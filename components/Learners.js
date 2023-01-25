@@ -4,9 +4,8 @@ import ImageMain from "../img/main.jpg";
 
 function Learners() {
   return (
-    
-    <div className="container"  data-aos="fade-up">
-      <div className="msg-alert">
+    <div className="container">
+      <div className="msg-alert" data-aos="zoom-in-up">
         <h2>Digital marketing specialists and web developers in Africa</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
@@ -16,7 +15,7 @@ function Learners() {
       </div>
       <div className="learners-pub">
         <div className="learnerAleatoir">
-          <div className="container-learner">
+          <div className="container-learner" >
             <div className="blog-learner">
               <Image
                 src={ImageMain}
