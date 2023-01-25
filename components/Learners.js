@@ -17,7 +17,36 @@ function Learners() {
         <div className="container-learner">
           <div className="blog-learner">
             <Image
-              className
+              src={ImageMain}
+              alt="image of main page"
+              className="leaner_img"
+            />
+            <div className="title-learner">Specialiiste en Markint Digital</div>
+            <div className="learner-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+              dignissimos eaque totam. Quidem, perferendi. perferendis.
+            </div>
+            <div className="detail">Detail</div>
+          </div>
+        </div>
+        <div className="container-learner">
+          <div className="blog-learner">
+            <Image
+              src={ImageMain}
+              alt="image of main page"
+              className="leaner_img"
+            />
+            <div className="title-learner">Specialiiste en Markint Digital</div>
+            <div className="learner-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+              dignissimos eaque totam. Quidem, perferendi. perferendis.
+            </div>
+            <div className="detail">Detail</div>
+          </div>
+        </div>
+        <div className="container-learner">
+          <div className="blog-learner">
+            <Image
               src={ImageMain}
               alt="image of main page"
               className="leaner-img"
@@ -33,7 +62,6 @@ function Learners() {
         <div className="container-learner">
           <div className="blog-learner">
             <Image
-              className
               src={ImageMain}
               alt="image of main page"
               className="leaner-img"
@@ -49,39 +77,6 @@ function Learners() {
         <div className="container-learner">
           <div className="blog-learner">
             <Image
-              className
-              src={ImageMain}
-              alt="image of main page"
-              className="leaner-img"
-            />
-            <div className="title-learner">Specialiiste en Markint Digital</div>
-            <div className="learner-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-              dignissimos eaque totam. Quidem, perferendi. perferendis.
-            </div>
-            <div className="detail">Detail</div>
-          </div>
-        </div>
-        <div className="container-learner">
-          <div className="blog-learner">
-            <Image
-              className
-              src={ImageMain}
-              alt="image of main page"
-              className="leaner-img"
-            />
-            <div className="title-learner">Specialiiste en Markint Digital</div>
-            <div className="learner-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-              dignissimos eaque totam. Quidem, perferendi. perferendis.
-            </div>
-            <div className="detail">Detail</div>
-          </div>
-        </div>
-        <div className="container-learner">
-          <div className="blog-learner">
-            <Image
-              className
               src={ImageMain}
               alt="image of main page"
               className="leaner-img"
