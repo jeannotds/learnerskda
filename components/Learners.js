@@ -5,7 +5,7 @@ import ImageMain from "../img/main.jpg";
 function Learners() {
   return (
     <div className="container">
-      <div className="msg-alert" data-aos="zoom-in-up">
+      <div className="msg-alert" data-aos="zoom-in-up" data-aos-delay="900">
         <h2>Digital marketing specialists and web developers in Africa</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
@@ -15,7 +15,7 @@ function Learners() {
       </div>
       <div className="learners-pub">
         <div className="learnerAleatoir">
-          <div className="container-learner" >
+          <div className="container-learner" data-aos="fade-down" data-aos-delay="50" >
             <div className="blog-learner">
               <Image
                 src={ImageMain}
@@ -32,7 +32,7 @@ function Learners() {
               <div className="detail">Detail</div>
             </div>
           </div>
-          <div className="container-learner">
+          <div className="container-learner" data-aos="fade-down" data-aos-delay="60">
             <div className="blog-learner">
               <Image
                 src={ImageMain}
@@ -49,7 +49,7 @@ function Learners() {
               <div className="detail">Detail</div>
             </div>
           </div>
-          <div className="container-learner">
+          <div className="container-learner" data-aos="fade-down" data-aos-delay="70">
             <div className="blog-learner">
               <Image
                 src={ImageMain}
@@ -66,7 +66,24 @@ function Learners() {
               <div className="detail">Detail</div>
             </div>
           </div>
-          <div className="container-learner">
+          <div className="container-learner" data-aos="fade-down" data-aos-delay="80">
+            <div className="blog-learner">
+              <Image
+                src={ImageMain}
+                alt="image of main page"
+                className="leaner-img"
+              />
+              <div className="title-learner">
+                Specialiiste en Markint Digital
+              </div>
+              <div className="learner-description" data-aos="fade-down" data-aos-delay="90">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                dignissimos eaque totam. Quidem, perferendi. perferendis.
+              </div>
+              <div className="detail">Detail</div>
+            </div>
+          </div>
+          <div className="container-learner" data-aos="fade-down" data-aos-delay="100">
             <div className="blog-learner">
               <Image
                 src={ImageMain}
@@ -83,7 +100,41 @@ function Learners() {
               <div className="detail">Detail</div>
             </div>
           </div>
-          <div className="container-learner">
+          <div className="container-learner" data-aos="fade-down" data-aos-delay="110">
+            <div className="blog-learner">
+              <Image
+                src={ImageMain}
+                alt="image of main page"
+                className="leaner-img"
+              />
+              <div className="title-learner">
+                Specialiiste en Markint Digital
+              </div>
+              <div className="learner-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                dignissimos eaque totam. Quidem, perferendi. perferendis.
+              </div>
+              <div className="detail">Detail</div>
+            </div>
+          </div>
+          <div className="container-learner" data-aos="fade-down" data-aos-delay="120">
+            <div className="blog-learner">
+              <Image
+                src={ImageMain}
+                alt="image of main page"
+                className="leaner-img"
+              />
+              <div className="title-learner">
+                Specialiiste en Markint Digital
+              </div>
+              <div className="learner-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                dignissimos eaque totam. Quidem, perferendi. perferendis.
+              </div>
+              <div className="detail">Detail</div>
+            </div>
+          </div>
+          <div className="container-learner" data-aos="fade-down" data-aos-delay="130">
             <div className="blog-learner">
               <Image
                 src={ImageMain}
