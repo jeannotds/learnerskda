@@ -4,7 +4,8 @@ import ImageMain from "../img/main.jpg";
 
 function Learners() {
   return (
-    <div className="container">
+    
+    <div className="container"  data-aos="fade-up">
       <div className="msg-alert">
         <h2>Digital marketing specialists and web developers in Africa</h2>
         <p>

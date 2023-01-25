@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 /* eslint-disable @next/next/no-page-custom-font */
 /* eslint-disable react/jsx-no-comment-textnodes */
 import Head from "next/head";
