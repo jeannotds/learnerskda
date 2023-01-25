@@ -7,10 +7,11 @@ import Header from "../components/Header";
 import Mains from "../components/Main";
 import Learners from "../components/Learners";
 import Footer from "../components/Footer";
+import { getAllUser } from "../Boite/frontend/util";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Home(learners) {
   return (
     <>
       <Head>
@@ -34,8 +35,17 @@ export default function Home() {
       </Head>
       <Header />
       <Mains />
-      <Learners />
+      <Learners data={learners} />
       <Footer />
     </>
   );
+}
+
+export async function getStaticProps() {
+  const learners = await getAllUser();
+  return {
+    props: {
+      learners,
+    },
+  };
 }
