@@ -1,0 +1,60 @@
+.footer{
+    padding: 20px 71px 0; 
+    height: 180px;
+    background-color: #111727;
+    color: #FFF;
+    display: flex;
+    margin-top: 60px;
+}
+
+.contact, 
+.apropos, 
+.categorie, 
+.inscrire{
+    padding: 10px;
+    width: 25%;
+}
+
+h2{
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 22px;
+}
+
+ul li{
+    list-style: none;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact ul{
+    display: flex;
+}
+
+.icon{
+    font-size: 45px;
+    padding-right: 15px;
+    margin-top: 20px;
+}
+
+.categorie h2{
+    margin-bottom: 20px;
+}
+
+.categorie ul li{
+   line-height: 2;
+}
+
+.apropos ul li {
+    line-height: 2;
+ }
+
+.inscrire h2 {
+    margin-bottom: 20px;
+}
+
+.inscrire ul li {
+   line-height: 2;
+}
+
+.apropos h2 {
+    margin-bottom: 20px;
+}
