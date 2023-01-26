@@ -20,6 +20,7 @@ function Learners({ data }) {
             return (
               <ListLearners
                 key={learner._id}
+                id={learner._id}
                 nom={learner.nom}
                 postnom={learner.postnom}
                 prenom={learner.prenom}
